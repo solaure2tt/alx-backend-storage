@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""Python function that returns all students sorted by average score"""
+"""Python function that returns all students
+   sorted by average score"""
+import pymongo
 
 
 def top_students(mongo_collection):
@@ -9,7 +11,7 @@ def top_students(mongo_collection):
        return:
           list of students
     """
-     return mongo_collection.aggregate([
+    return mongo_collection.aggregate([
         {
             "$project":
                 {
